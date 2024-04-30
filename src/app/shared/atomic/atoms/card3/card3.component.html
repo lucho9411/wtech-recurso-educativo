@@ -1,0 +1,231 @@
+<div class="card">
+    <div class="card-header">
+        <i class="bi bi-question-circle-fill"></i>&nbsp;&nbsp;&nbsp;<span class="subtitulo">Ejercicio</span>
+    </div>
+    <div class="card-body">
+        <form [formGroup]="myForm">
+            <span class="sub-subtitulo">Seleccionar las respuestas correctas</span>
+            <ul>
+                <li>¿Cuál es la diferencia de los animales vertebrados e invertebrados?</li>
+                <ul>
+                    <fieldset [disabled]=comprobacion>
+                        <li>
+                            <div class="form-check">
+                                <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="flexRadioDefault"
+                                    id="flexRadioDefault1"
+                                    value="A"
+                                    formControlName="pregunta1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                  <b>A.</b> Las alas.
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="flexRadioDefault"
+                                    id="flexRadioDefault1"
+                                    value="B"
+                                    formControlName="pregunta1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    <b>B.</b> Las columna vertebral.
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="flexRadioDefault"
+                                    id="flexRadioDefault1"
+                                    value="C"
+                                    formControlName="pregunta1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    <b>C.</b> Las escamas.
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="flexRadioDefault"
+                                    id="flexRadioDefault1"
+                                    value="D"
+                                    formControlName="pregunta1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    <b>D.</b> El color de su piel.
+                                </label>
+                            </div>
+                        </li>
+                    </fieldset>
+                </ul>
+            </ul>
+            @if (comprobacion) {
+                <div class="row">
+                    <div class="col-12">
+                        <div class="validacion">
+                            @if (myForm.get('pregunta1')?.value!=='B') {
+                                <div class="row retroalimentacion">
+                                    <div class="col-12">
+                                        <i class="bi bi-x-circle-fill"></i>&nbsp;&nbsp;&nbsp;
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            Respuesta incorrecta.
+                                        </label>
+                                    </div>
+                                </div>
+                            }
+                            @else {
+                                <div class="row retroalimentacion">
+                                    <div class="col-12">
+                                        <i class="bi bi-check-circle-fill"></i>&nbsp;&nbsp;&nbsp;
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            Bien hecho.
+                                        </label>
+                                    </div>
+                                </div>
+                            }
+                            <div class="row retroalimentacion">
+                                <div class="col-12">
+                                    <p>
+                                        <span class="sub-subtitulo">Retroalimentación:&nbsp;&nbsp;</span>
+                                        La respuesta correcta es la <b>B.</b> Recuerda que la diferencia 
+                                        principal entre los animales vertebrados e invertebrados es la 
+                                        presencia o ausencia de columna vertebral.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><br>
+            }
+            <ul>
+                <li>Los tipos de animales vertebrados son....</li>
+                <ul>
+                    <fieldset [disabled]=comprobacion>
+                        <li>
+                            <div class="form-check2">
+                                <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="flexRadioDefault2"
+                                    id="flexRadioDefault1"
+                                    value="A"
+                                    formControlName="pregunta2">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                  <b>A.</b> Las aves y los peces.
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check2">
+                                <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="flexRadioDefault2"
+                                    id="flexRadioDefault1"
+                                    value="B"
+                                    formControlName="pregunta2">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    <b>B.</b> Los gusanos y todos los insectos.
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check2">
+                                <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="flexRadioDefault2"
+                                    id="flexRadioDefault1"
+                                    value="C"
+                                    formControlName="pregunta2">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    <b>C.</b> Los animales domésticos.
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check2">
+                                <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="flexRadioDefault2"
+                                    id="flexRadioDefault1"
+                                    value="D"
+                                    formControlName="pregunta2">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    <b>D.</b> Los mamíferos, reptiles, anfibios, aves y peces.
+                                </label>
+                            </div>
+                        </li>
+                    </fieldset>
+                </ul>
+            </ul>
+            @if (comprobacion) {
+                <div class="row">
+                    <div class="col-12">
+                        <div class="validacion">
+                            @if (myForm.get('pregunta2')?.value!=='D') {
+                                <div class="row retroalimentacion">
+                                    <div class="col-12">
+                                        <i class="bi bi-x-circle-fill"></i>&nbsp;&nbsp;&nbsp;
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            Respuesta incorrecta.
+                                        </label>
+                                    </div>
+                                </div>
+                            }
+                            @else {
+                                <div class="row retroalimentacion">
+                                    <div class="col-12">
+                                        <i class="bi bi-check-circle-fill"></i>&nbsp;&nbsp;&nbsp;
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            Bien hecho.
+                                        </label>
+                                    </div>
+                                </div>
+                            }
+                            <div class="row retroalimentacion">
+                                <div class="col-12">
+                                    <p>
+                                        <span class="sub-subtitulo">Retroalimentación:&nbsp;&nbsp;</span>
+                                        La respuesta correcta es la <b>D.</b> Recuerda que los animales
+                                        vertebrados están conformados por los mamíferos, reptiles, anfibios,
+                                        aves y peces.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><br>
+            }
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-4">
+                    @if (!comprobacion) {
+                            <button
+                            type="button"
+                            class="btn btn-primary"
+                            [disabled]="myForm.invalid"
+                            disabled="{myForm.invalid}"
+                            (click)="comprobar()">
+                                Comprobar
+                        </button>
+                    }
+                    @else {
+                        <span class="subtitulo">Puntaje: {{ puntaje || 0 }}/2</span>
+                    }
+                </div>
+                <div class="col-4"></div>
+            </div>
+        </form>
+    </div>
+</div>

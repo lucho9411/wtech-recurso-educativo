@@ -1,0 +1,23 @@
+.container-fluid {
+    margin: 0.5% !important;
+    height: 100% !important;
+}
+
+.bg-light {
+    display: flex !important;
+    box-sizing: border-box;
+    border: 0.1px solid;
+    border-color: lightgray;
+    background-color: #fff !important;
+    color: #000000de !important;
+    border-bottom-left-radius: 10px !important;
+}
+
+.row-content {
+    padding-left: calc(var(--bs-gutter-x) * .5);
+}
+
+app-side-bar {
+    top: 0;
+    position: absolute;
+}

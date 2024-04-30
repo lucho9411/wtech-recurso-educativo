@@ -1,0 +1,46 @@
+span {
+    font-size: 1rem !important;
+    font-weight: 550 !important;
+    font-family: Roboto, Helvetica Neue, sans-serif;
+    color: black;
+}
+
+img {
+    position: relative;
+    display: flex;
+    width: 100%;
+}
+
+#menu {
+    margin-left: 5% !important;
+    width: 90% !important;
+    margin-top: 10%;
+}
+
+i {
+    font-size: 1.5rem !important;
+}
+
+li {
+    width: 100% !important;
+}
+
+a:hover {
+    background-color: rgb(240, 180, 41) !important;
+    color: white !important;
+}
+span:hover {
+    color: white !important;
+}
+
+.bi {
+    color: black !important;
+}
+
+.bi:hover {
+    color: white !important;
+}
+
+.bi-arrow-down {
+    font-size: 1rem !important;
+}
